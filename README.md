@@ -27,8 +27,7 @@ sanity install sanity-plugin-inline-svg
 ```js
 import svgUploadPreview from 'sanity-plugin-inline-svg';
 ```
-![](https://media1.giphy.com/media/TW3j4288K5n00d3YoK/giphy.gif)
-
+![](https://media.giphy.com/media/iF0wlg8tIsftlFwYNi/giphy.gif)
 
 **Long version:** In your schema definitions (think `schemas/clientList.js`):
 
@@ -51,7 +50,7 @@ export default {
 
 **Within Array:**
 
-![](arrayPreview.gif)
+![](https://media.giphy.com/media/Lq0d4kcJcldbpnrhH2/giphy.gif)
 
 1. Create an object schema something like `schemas/svgUploadArray.js`
 ```js
@@ -121,19 +120,6 @@ export default {
   ]
 }
 ```
-
-## Development
-Clone down this repository and run the following commands at the root of this repository.
-
-```
-npm i
-npm link
-```
-
-Now you can start developing the plugin.
-To include it in your Sanity test site, navigate to the root folder of your cms project and run `npm link sanity-plugin-inline-svg`. You will now reference the local version of the when using `import svgUploadPreview from 'sanity-plugin-inline-svg'` in your schemas.
-
-To debug the plugin files in you then need to run `sanity start --preserve-symlinks` in your cms project, and `npm run dev` in your sanity-plugin-inline-svg-upload-preview repository folder.
 
 ## TODO
 - [ ] Allow styles to override
