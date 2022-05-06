@@ -1,0 +1,87 @@
+.svgPreviewBackground {
+	background-image: linear-gradient(45deg, rgba(23, 23, 23, 0.05) 25%, transparent 25%), linear-gradient(-45deg, rgba(23, 23, 23, 0.05) 25%, transparent 25%), linear-gradient(45deg, transparent 75%, rgba(23, 23, 23, 0.05) 75%), linear-gradient(-45deg, transparent 75%, rgba(23, 23, 23, 0.05) 75%);
+	background-size: 20px 20px;
+	background-position: 0 0, 0 10px, 10px -10px, -10px 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 250px;
+	border: 1px solid #cad1dc;
+	border-radius: 3px;
+	position: relative;
+	cursor: pointer;
+	pointer-events: visible;
+}
+
+.svgPreviewBackground label {
+	-webkit-appearance: button;
+	border: 1px solid transparent;
+	background-color: #2276fc;
+	color: #fff;
+	display: inline-flex;
+	justify-content: stretch;
+	align-items: center;
+	margin: 0;
+	position: relative;
+	font-size: 1em;
+	height: 38px;
+	transition: border-color 0.15s, background-color 0.15s, color 0.15s, opacity 0.15s, box-shadow 0.1s;
+	padding: 0 calc(2em - 1px);
+	border-radius: 0.25rem;
+	line-height: 0;
+	cursor: pointer;
+	pointer-events: visible;
+	z-index: 999;
+	transition: border-color 0.3s linear;
+}
+
+.uploadButton {
+	z-index: 2;
+}
+
+.svgPreviewBackground label:hover {
+	background-color: rgb(9, 102, 251);
+}
+
+.svgWrapper svg {
+	max-height: 80%;
+	max-width: 80%;
+	display: flex;
+	margin: auto;
+	width: 100%;
+	height: 100%;
+}
+
+.svgPreviewBackground.hasValue label {
+	display: none;
+}
+
+.updateSvg {
+	color: #fff;
+	background-color: #f03e2f;
+	position: absolute;
+	border: 1px solid transparent;
+	border-radius: 0.25rem;
+	height: 2.5rem;
+	padding: 0 1rem;
+	margin: 0;
+	cursor: pointer;
+	top: 1rem;
+	right: 1rem;
+	display: flex;
+	align-items: center;
+}
+
+.updateSvg:hover  {
+	background-color:#e0392a;
+}
+
+.svgPreviewBackground input[type=file] {
+	opacity: 0;
+	z-index: -1;
+	position: absolute;
+}
+
+.svgPreviewBackground input[type=file]:focus + label {
+	outline: 2px solid;
+}
